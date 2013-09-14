@@ -51,7 +51,7 @@ AI.calcNaiveObjectScore = function( object ){
       timeUntilPurchase = remainingFrenzy + (object.price - projectedCookies) / Game.cookiesPs * Game.frenzyPower;
     }
   }
-  return timeUntilPurchase + object.price / object.storedCps;
+  return timeUntilPurchase + object.price / object.storedCps * Game.frenzyPower;
 }
 
 AI.naiveBuyObjects = function(){
